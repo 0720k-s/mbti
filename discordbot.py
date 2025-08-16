@@ -1,5 +1,4 @@
 # MBTI診断Discord Bot
-# 独学エンジニア：しゅんK（ポートフォリオ用サンプル／IDはすべて架空値）
 
 import os
 import discord
