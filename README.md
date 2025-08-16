@@ -1,36 +1,37 @@
-# discordpy-startup
+# Discord MBTI診断Bot
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+## 概要
 
-- Herokuでdiscord.pyを始めるテンプレートです。
-- Use Template からご利用ください。
-- 使い方はこちら： [Discord Bot 最速チュートリアル【Python&Heroku&GitHub】 - Qiita](https://qiita.com/1ntegrale9/items/aa4b373e8895273875a8)
+このBotは、**MBTI診断（性格診断）をDiscord上で手軽に実施できる自作Bot**です。  
+ユーザーはボタンをクリックして24問＋A/Tサブタイプ4問に回答し、診断結果や履歴・傾向グラフも閲覧できます。
 
-## 各種ファイル情報
+- ポートフォリオ提出用
+- DBは **PostgreSQL**、診断データの保存や履歴・傾向分析に対応
+- Bot UIは全てDiscordのインタラクション＆スラッシュコマンドで完結
 
-### discordbot.py
-PythonによるDiscordBotのアプリケーションファイルです。
+---
 
-### requirements.txt
-使用しているPythonのライブラリ情報の設定ファイルです。
+## 機能
 
-### Procfile
-Herokuでのプロセス実行コマンドの設定ファイルです。
+- **MBTI診断パネル**の自動生成（ボタンで全設問に直感的に回答）
+- **診断結果を自動保存＆DM送信**（最新＋直近5件の履歴参照可）
+- **傾向グラフ（matplotlibで描画）** をユーザーごとにDM送信
+- **管理者向け履歴削除コマンド**（ユーザーごと/件数指定対応）
+- ギルド＆チャンネルID等は**環境変数/設定ファイルで切り替え可能**
 
-### runtime.txt
-Herokuでの実行環境の設定ファイルです。
+---
 
-### app.json
-Herokuデプロイボタンの設定ファイルです。
+## セットアップ手順
 
-### .github/workflows/flake8.yaml
-GitHub Actions による自動構文チェックの設定ファイルです。
+### 1. 必要なもの
 
-### .gitignore
-Git管理が不要なファイル/ディレクトリの設定ファイルです。
+- Python 3.9 以上
+- PostgreSQL インスタンス（Heroku/Railway等でも可）
+- Discordアプリケーション/Botトークン
 
-### LICENSE
-このリポジトリのコードの権利情報です。MITライセンスの範囲でご自由にご利用ください。
+### 2. インストール
 
-### README.md
-このドキュメントです。
+```bash
+git clone <このリポジトリのURL>
+cd <プロジェクトフォルダ>
+pip install -r requirements.txt
