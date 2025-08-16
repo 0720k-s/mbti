@@ -1,1 +1,4 @@
-discord.py[voice]
+discord.py>=2.3.2
+asyncpg>=0.29.0
+python-dotenv>=1.0.1
+matplotlib>=3.8.0
